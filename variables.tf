@@ -1,11 +1,11 @@
-variable "resource_group_name" {
+# variable "resource_group_name" {
 
-}
+# }
 
-variable "location" {
+# variable "location" {
   
-}
+# }
 
-variable "network_interface_ids" {
-    
-}
+# variable "network_interface_ids" {
+
+# }
