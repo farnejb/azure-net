@@ -6,6 +6,6 @@
   
 # }
 
-# variable "network_interface_ids" {
+variable "net_ids" {
 
-# }
+}

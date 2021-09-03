@@ -4,7 +4,7 @@ resource "azurerm_linux_virtual_machine" "example" {
   location            = "EastUS2"
   size                = "Standard_F2"
   admin_username      = "adminuser"
-#   network_interface_ids = var.network_interface_ids
+  network_interface_ids = var.net_ids #azurerm_network_interface.example.id
 
   admin_ssh_key {
     username   = "adminuser"
