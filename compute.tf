@@ -1,10 +1,15 @@
+data "azurerm_network_interface" "test" {
+    name = "example-nic"
+    resource_group_name = "example-resources"
+}
+
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
   resource_group_name = "example-resources"
   location            = "EastUS2"
   size                = "Standard_F2"
   admin_username      = "adminuser"
-  network_interface_ids = var.net_ids #azurerm_network_interface.example.id
+  network_interface_ids = data.azurerm_network_interface.test.id #azurerm_network_interface.example.id
 
   admin_ssh_key {
     username   = "adminuser"

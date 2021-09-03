@@ -6,6 +6,6 @@
   
 # }
 
-variable "net_ids" {
+# variable "net_ids" {
 
-}
+# }
