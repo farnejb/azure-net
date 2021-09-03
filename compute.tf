@@ -1,10 +1,10 @@
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "example-machine"
-  resource_group_name = var.resource_group_name
-  location            = var.location
+  resource_group_name = "example-resources"
+  location            = "EastUS2"
   size                = "Standard_F2"
   admin_username      = "adminuser"
-  network_interface_ids = var.network_interface_ids
+#   network_interface_ids = var.network_interface_ids
 
   admin_ssh_key {
     username   = "adminuser"
