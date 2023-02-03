@@ -14,6 +14,9 @@ provider "azurerm" {
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "EastUS2"
+  tags = {
+    environment = "dev"
+  }
 }
 
 resource "azurerm_virtual_network" "example" {
@@ -21,6 +24,10 @@ resource "azurerm_virtual_network" "example" {
   address_space       = ["10.0.0.0/16"]
   location            = "EastUS2" #azurerm_resource_group.example.location
   resource_group_name = "example-resources" #azurerm_resource_group.example.name
+  
+  tags = {
+    environment = "dev"
+  }
   
   depends_on = [
     azurerm_resource_group.example
