@@ -12,7 +12,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = var.organization + "PCU1-ABCadddaaa-RG-342"
+  name     = "${var.test_variable}PCU1-EIMAnalytics-RG-001"
   location = "EastUS2"
   tags = {
     environment = "dev"
