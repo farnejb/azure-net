@@ -18,10 +18,10 @@ module "pet" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "${var.test_variable}PCU1-EIMAnalytics-RG-001"
+  name     = "${var.test_variable}PCU1-EIMAnalytics-RG-00123"
   location = "EastUS2"
   tags = {
-    environment = "dev"
+    environment = "sand"
   }
 }
 
@@ -32,7 +32,7 @@ resource "azurerm_virtual_network" "example" {
   resource_group_name = azurerm_resource_group.example.name
   
   tags = {
-    environment = "dev"
+    environment = "sand"
   }
   
   depends_on = [
