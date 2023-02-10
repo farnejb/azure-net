@@ -11,6 +11,12 @@ provider "azurerm" {
   features {}
 }
 
+module "pet" {
+  source  = "carljavier/pet/random"
+  version = "0.0.4"
+  string_length = 5
+}
+
 resource "azurerm_resource_group" "example" {
   name     = "${var.test_variable}PCU1-EIMAnalytics-RG-001"
   location = "EastUS2"
@@ -20,7 +26,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_virtual_network" "example" {
-  name                = "example-network-update-1"
+  name                = module.pet.random_pet_nickname #"example-network-update-1"
   address_space       = ["10.0.0.0/16"]
   location            = "EastUS2" #azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
