@@ -18,7 +18,7 @@ module "pet" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "${var.test_variable}PCU1-EIMAnalytics-RG-00123"
+  name     = "${var.test_variable}123"
   location = "EastUS2"
   tags = {
     environment = "sand"
