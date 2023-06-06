@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "example" {
   name     = "${var.test_variable}-123"
   location = "EastUS2"
   tags = {
-    environment = "sand"
+    environment = "test"
   }
 }
 
