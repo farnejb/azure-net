@@ -12,8 +12,8 @@ provider "azurerm" {
 }
 
 module "pet" {
-  source  = "carljavier/pet/random"
-  version = "0.0.4"
+  source  = "app.terraform.io/jfarnell-ps-demo/pet/random"
+  version = "1.0.1"
   string_length = 5
 }
 
